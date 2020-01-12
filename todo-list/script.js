@@ -3,7 +3,7 @@ var lista = document.querySelector('#todo-list');
 var tarefa = document.querySelector('input[name=tarefa]');
 var adicionar = document.querySelector('button.btnAdicionar');
 
-var to_dos = [ ];
+var to_dos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function iniciarToDos(){
     lista.innerHTML = '';
@@ -44,5 +44,9 @@ adicionar.onclick = addTodo;
 function deleteToDo(index){
     to_dos.splice(index, 1);
     iniciarToDos();
+}
+
+function saveList(){
+    localStorage.setItem('list_todos', JSON.stringify(to_dos));
 }
 
