@@ -1,6 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background: #606060;
+    color: #fafafa;
 }
 
 ul, li {
@@ -12,8 +14,12 @@ a{
     text-decoration: none;
 }
 
+header {
+    margin-top: 50px;
+}
+
 .container {
-    max-width: 1950px;
+    max-width: 550px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -32,8 +38,64 @@ a{
     flex-direction: column;
 }
 
-#todo-list li {
-    padding: 15px;
-    border: 1px solid #faa;
+.box-title h1 {
+    font-size: 32px;
+    font-family: 'Baloo Bhai';
 }
 
+#todo-list {
+    width: 100%;
+    padding: 0;
+}
+
+#todo-list li {
+    font-family: 'Sniglet';
+    padding: 15px;
+    border: 1px solid #faa;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#todo-list li a {
+    font-size: 20px;
+    transition: color 350ms ease;
+}
+
+#todo-list li a:hover {
+    color: crimson;
+}
+
+.todoBox {
+    max-width: 450px;
+    margin: 0 auto;;
+}
+
+.btnAdicionar{
+    font-family: 'Sniglet', cursive;
+    border-style: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    padding: 10px 80px;
+    margin: 5px auto;
+    pointer-events: all;
+    cursor: pointer;
+    transition: background 350ms ease, color 350ms ease;
+}
+
+.btnAdicionar:hover {
+    background: chartreuse;
+    color: #fff;
+}
+
+.addTarefa{
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
